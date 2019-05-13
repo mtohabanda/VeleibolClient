@@ -1,0 +1,22 @@
+<div  class="container center " *ngIf="!habilitarPantalla" >
+    <div class="row">
+        <div class="col-md-4">
+            <span>Equipo 1:</span>
+            <input type="text" name="Equipo1"  [(ngModel)]="equipo1.nombre">
+        </div>
+      
+      </div>
+      
+      <div  class="row">
+          <div class="col-md-4">
+              <span>Equipo 2:</span>
+              <input type="text" name="equipo2"[(ngModel)]="equipo2.nombre">
+             
+          </div>    
+      </div> 
+      <div class="row">
+          <div class="col-md-4"> 
+            <button type="button" class="btn btn-primary" (click)="iniciarJuego()">Iniciar Juego</button>
+          </div>
+      </div> 
+</div>

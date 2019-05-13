@@ -1,0 +1,41 @@
+<div class="container" align="center" *ngIf="existeEquiposParaIniciarPartido">
+  
+  <div class="row center-marcador">
+        <span class="titulo-etiqueta font-weight-bold" align="left">Marcador</span>
+          <div class="col-md-2">
+            <p class="font-size">{{equipo1.nombre}}:</p> 
+          </div>
+          <div class="col-md-2 border">
+              <p style="font-size: 25pt" class="font-weight-bold">{{equipo1.puntajeActual}}</p>
+   
+          </div>
+          <div class="col-md-2">
+              <p class="font-size">{{equipo2.nombre}}:</p>
+          </div>
+          <div class="col-md-2 border">
+              <p style="font-size: 25pt" class="font-weight-bold">{{equipo2.puntajeActual}}</p>
+          </div>
+  </div>
+  <br>
+  <div class="row center-servicio">
+     <span class="titulo-etiqueta font-weight-bold">Servicio</span>
+     <div class="col-md-4 form-check">
+        <input type="radio" class="form-check-input" id="rdEquipo1" name="equipos">
+        <label class="font-size" for="materialUnchecked">{{equipo1.nombre}}</label>
+      </div>
+      
+      <!-- Material checked -->
+      <div class="col-md-4 form-check">
+        <input type="radio" class="form-check-input" id="rdEquipo2" name="equipos" checked>
+        <label class="font-size" for="materialChecked">{{equipo2.nombre}}</label>
+      </div>
+  </div>
+  <div class="row center-button">
+    <div class="col-md-4">
+        <button type="button" class="btn btn-primary" (click)=" procesarPartido(equipo1.equipoId, equipo1.puntajeActual + 1 );" >Punto {{equipo1.nombre}}</button>
+    </div>
+    <div class="col-md-4">
+        <button type="button" class="btn btn-primary"  (click)=" procesarPartido(equipo2.equipoId, equipo2.puntajeActual + 1 ) ">Punto {{equipo2.nombre}}</button>
+    </div>
+  </div>
+</div>
